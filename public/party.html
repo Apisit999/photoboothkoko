@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>งานปาร์ตี้</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="js/script.js"></script>
+    <header>
+
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <div class="logo-text">
+                <span>KoKo</span>
+                <h2>WEDDING</h2>
+            </div>
+        </div>
+
+        <div class="language-dropdown">
+
+            <div class="lang-selected" onclick="toggleLang()">
+                <img id="lang-flag" src="https://flagcdn.com/w20/th.png">
+                <span id="lang-text">ไทย</span>
+                <span class="arrow">▾</span>
+            </div>
+
+            <div class="lang-options" id="lang-options">
+
+                <div class="lang-option" onclick="changeLang('th')">
+                    <img src="https://flagcdn.com/w20/th.png">
+                    ไทย
+                </div>
+
+                <div class="lang-option" onclick="changeLang('en')">
+                    <img src="https://flagcdn.com/w20/gb.png">
+                    English
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="navMenu">
+
+            <a href="#home" data-lang="home">หน้าแรก</a>
+            <a href="#services" data-lang="services">บริการ</a>
+            <a href="#gallery" data-lang="gallery">ผลงาน</a>
+            <a href="#pricing" data-lang="packages">แพ็กเกจ</a>
+            <a href="#contact" data-lang="contact">ติดต่อ</a>
+
+        </nav>
+
+    </header>
+
+    <section class="gallery">
+
+        <h2 class="section-title" data-lang="party_title">งานปาร์ตี้</h2>
+
+        <a href="index.html" class="back-btn" data-lang="back_btn">← กลับ</a>
+
+        <div class="gallery-grid">
+            <img src="images/party/1.jpg">
+            <img src="images/party/2.jpg">
+            <img src="images/party/3.jpg">
+            <img src="images/party/4.jpg">
+            <img src="images/party/13.jpg">
+            <img src="images/party/6.jpg">
+            <img src="images/party/7.jpg">
+            <img src="images/party/8.jpg">
+            <img src="images/party/9.jpg">
+            <img src="images/party/10.jpg">
+            <img src="images/party/11.jpg">
+            <img src="images/party/12.jpg">
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

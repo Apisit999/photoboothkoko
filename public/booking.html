@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>จอง Photobooth | KOKO</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+
+<body>
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-circle">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <span>KoKo WEEDDING</span>
+
+        </div>
+
+    </header>
+
+
+    <section class="booking-section">
+
+        <div class="booking-card">
+
+            <h1 class="title">จอง Photobooth</h1>
+
+            <form id="bookingForm" class="booking-form">
+
+                <label>แพ็กเกจที่เลือก</label>
+                <input type="text" id="package" class="input" readonly>
+
+                <label>ชื่อ - นามสกุล</label>
+                <input type="text" id="name" class="input" placeholder="กรอกชื่อ" required>
+
+                <label>วันที่จัดงาน</label>
+                <input type="date" id="date" class="input" required>
+
+                <label>เวลาเริ่มงาน</label>
+                <input type="time" id="time" class="input" required>
+
+                <label>สถานที่จัดงาน</label>
+                <input type="text" id="location" class="input" placeholder="ชื่อสถานที่">
+
+                <label>จังหวัด</label>
+                <input type="text" id="province" class="input" placeholder="กรอกจังหวัด">
+
+                <input type="hidden" id="lat">
+                <input type="hidden" id="lng">
+
+                <label>เบอร์โทร</label>
+                <input type="tel" id="phone" class="input" placeholder="กรอกเบอร์โทร" required>
+
+                <button type="button" class="submit-btn" onclick="sendBooking()">
+                    ส่งการจอง
+                </button>
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const packageName = params.get("package");
+
+        if (packageName) {
+            document.getElementById("package").value = packageName;
+        }
+
+    </script>
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

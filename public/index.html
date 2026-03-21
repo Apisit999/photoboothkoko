@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photobooth KoKo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="booking.html">
+    <link rel="stylesheet" href="js/script.js">
+
+</head>
+
+
+<body>
+
+    <script src="js/script.js"></script>
+    <header>
+
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="images/logo.png" alt="logo">
+            </div>
+
+            <div class="logo-text">
+                <span>KoKo</span>
+                <h2>WEDDING</h2>
+            </div>
+        </div>
+
+        <div class="language-dropdown">
+
+            <div class="lang-selected" onclick="toggleLang()">
+                <img id="lang-flag" src="https://flagcdn.com/w20/th.png">
+                <span id="lang-text">ไทย</span>
+                <span class="arrow">▾</span>
+            </div>
+
+            <div class="lang-options" id="lang-options">
+
+                <div class="lang-option" onclick="changeLang('th')">
+                    <img src="https://flagcdn.com/w20/th.png">
+                    ไทย
+                </div>
+
+                <div class="lang-option" onclick="changeLang('en')">
+                    <img src="https://flagcdn.com/w20/gb.png">
+                    English
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="navMenu">
+
+            <a href="#home" data-lang="home">หน้าแรก</a>
+            <a href="#services" data-lang="services">บริการ</a>
+            <a href="#gallery" data-lang="gallery">ผลงาน</a>
+            <a href="#pricing" data-lang="packages">แพ็กเกจ</a>
+            <a href="#contact" data-lang="contact">ติดต่อ</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section id="home" class="hero">
+        <h1 data-lang="hero_title">Photobooth KOKO</h1>
+        <h2 data-lang="hero_subtitle">สร้างความทรงจำให้ทุกงานสำคัญของคุณ</h2>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="services">
+
+        <h2 data-lang="services_title">บริการของเรา</h2>
+
+        <div class=" grid">
+
+            <div class="card">
+                <h3>📸 บริการถ่ายภาพ Photobooth</h3>
+                <p>บริการPhotoboothสำหรับทุกงานสำคัญ</p>
+                <p>ถ่ายภาพสนุกๆพร้อมพร็อพหลากหลายและไฟสตูดิโอคุณภาพ</p>
+            </div>
+
+            <div class="card">
+                <h3>🖨พิมพ์ทันที</h3>
+                <p>พิมพ์ภาพถ่ายได้ทันทีภายในไม่กี่วินาที</p>
+                <p>แขกในงานสามารถรับรูปกลับบ้านเป็นที่ระลึกได้ทันที</p>
+            </div>
+
+            <div class="card">
+                <h3>📱ดาวน์โหลดภาพ QR ทันที</h3>
+                <p>ดาวน์โหลดภาพผ่านQRCodeได้ทันที</p>
+                <p>สะดวกรวดเร็วแชร์ลงโซเชียลได้ทันที</p>
+            </div>
+
+            <div class="card">
+                <h3>👨‍💼 ทีมงานดูแลหน้างาน</h3>
+                <p>ทีมงานมืออาชีพคอยดูแลตลอดระยะเวลางาน</p>
+                <p>ช่วยจัดท่าถ่ายภาพและดูแลอุปกรณ์ให้พร้อมใช้งาน</p>
+            </div>
+
+
+            <div class="card">
+                <h3>🖼 แกลเลอรี่ออนไลน์</h3>
+                <p>รวมภาพถ่ายทั้งหมดจากภายในงาน</p>
+                <p>สามารถเข้าชมและดาวน์โหลดภาพได้ตลอดเวลา</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="gallery">
+
+        <div class="gallery_title">
+            <h2 data-lang="gallery_title">ผลงาน</h2>
+        </div>
+
+        <div class="gallery-grid">
+
+            <a href="wedding.html" class="card">
+                <img src="images/wedding/4.jpg">
+                <div class="overlay">งานแต่งงาน</div>
+
+            </a>
+
+            <a href="party.html" class="card">
+                <img src="images/party/5.jpg">
+                <div class="overlay">งานปาร์ตี้</div>
+            </a>
+
+            <a href="event.html" class="card">
+                <img src="images/event/5.jpg">
+                <div class="overlay">งานอีเวนต์</div>
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section id="pricing" class="services">
+
+        <h2 data-lang="package_title">แพ็กเกจ</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>เริ่มต้น</h3>
+                <p> Size S 2x6</p>
+                <p>2 ชั่วโมง</p>
+                <p>เริ่มต้น 7,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('เริ่มต้น | Size S 2x6 | 2 ชั่วโมง | 7,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>เริ่มต้น</h3>
+                <p> Size M 2x6</p>
+                <p>3 ชั่วโมง</p>
+                <p>เริ่มต้น 8,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('เริ่มต้น | Size M 2x6 | 3 ชั่วโมง | 8,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>เริ่มต้น</h3>
+                <p> Size L 2x6</p>
+                <p>4 ชั่วโมง</p>
+                <p>เริ่มต้น 9,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('เริ่มต้น | Size L 2x6 | 4 ชั่วโมง | 9,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>มาตรฐาน</h3>
+                <p> Size SS 4x6</p>
+                <p>2 ชั่วโมง</p>
+                <p>เริ่มต้น 11,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('มาตรฐาน | Size SS 4x6 | 2 ชั่วโมง | 11,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>มาตรฐาน</h3>
+                <p> Size MM 4x6</p>
+                <p>3 ชั่วโมง</p>
+                <p>เริ่มต้น 13,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('มาตรฐาน | Size MM 4x6 | 3 ชั่วโมง | 13,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>มาตรฐาน</h3>
+                <p> Size L 2x6</p>
+                <p>4 ชั่วโมง</p>
+                <p>เริ่มต้น 15,900 บาท</p>
+                <button class="select-btn" onclick="goPackage('มาตรฐาน | Size L 2x6 | 4 ชั่วโมง | 15,900 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>พรีเมียม</h3>
+                <p> Size S1 3x4</p>
+                <p>2 ชั่วโมง</p>
+                <p>เริ่มต้น 12,400 บาท</p>
+                <button class="select-btn" onclick="goPackage('พรีเมียม | Size S1 3x4 | 2 ชั่วโมง | 12,400 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>พรีเมียม</h3>
+                <p> Size M1 3x4</p>
+                <p>3 ชั่วโมง</p>
+                <p>เริ่มต้น 14,400 บาท</p>
+                <button class="select-btn" onclick="goPackage('พรีเมียม | Size M1 3x4 | 3 ชั่วโมง | 14,400 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>พรีเมียม</h3>
+                <p> Size L1 3x4</p>
+                <p>4 ชั่วโมง</p>
+                <p>เริ่มต้น 16,400 บาท</p>
+                <button class="select-btn" onclick="goPackage('พรีเมียม | Size L1 3x4 | 4 ชั่วโมง | 16,400 บาท')">
+                    เลือกแพ็กเกจ
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="services">
+
+        <div class="contact-header">
+
+            <button class="contact-btn" data-lang="contact_btn">📞 ติดต่อเรา</button>
+
+            <h2 data-lang="contact_desc">ติดต่อเราได้ทุกช่องทาง ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษาและช่วยเหลือคุณ</h2>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- โทรศัพท์ -->
+
+            <div class="contact-card">
+
+                <div class="icon phone">📞</div>
+
+                <h3 data-lang="phone_title">โทรศัพท์</h3>
+
+                <p>● 080-081-9933 (คุณโก)</p>
+                <p>● 089-216-1896 (คุณขวัญ)</p>
+
+                <span class="time" data-lang="open_time">เวลาทำการ: 9:00-18:00 น.</span>
+                <a href="tel:0800819933" class="contact-link" data-lang="call_us">
+                    โทรหาเรา
+                </a>
+
+            </div>
+
+            <!-- LINE -->
+
+            <div class="contact-card">
+
+                <div class="icon line">LINE</div>
+
+                <h3 data-lang="line_title">Line Official</h3>
+
+                <p>@024ppzhh</p>
+
+                <p class="desc" data-lang="line_reply">ตอบกลับเร็ว ภายใน 10 นาที</p>
+
+                <a href="https://line.me/R/ti/p/@024ppzhh" class="contact-link" data-lang="chat_now">
+                    แชททันที
+                </a>
+
+            </div>
+
+            <!-- FACEBOOK -->
+
+            <div class="contact-card">
+
+                <div class="icon facebook">f</div>
+
+                <h3 data-lang="facebook_title">Facebook</h3>
+
+                <p>KOKOPhotobooth Wedding</p>
+
+                <p class="desc" data-lang="facebook_desc">ติดตามข่าวสารและอัปเดต</p>
+
+                <a href="https://facebook.com/kokophotobooth" class="contact-link" data-lang="facebook_btn">
+                    ไปที่ Facebook
+                </a>
+
+            </div>
+
+            <!-- INSTAGRAM -->
+
+            <div class="contact-card">
+
+                <div class="icon instagram">
+                    <img src="images/logoig.png" alt="Instagram">
+                </div>
+
+                <h3 data-lang="instagram_title">Instagram</h3>
+
+                <p>@photobooth.koko</p>
+
+                <p class="desc" data-lang="instagram_desc">ติดตามภาพผลงานและบรรยากาศงานจริง</p>
+
+                <a href="https://instagram.com/photobooth.koko" class="contact-link" data-lang="instagram_btn">
+                    ไปที่ Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- LOGO + ABOUT -->
+
+            <div class="footer-about">
+
+                <div class="footer-logo">
+
+                    <img src="images/logo.png" alt="Koko Wedding">
+
+                    <h3>Koko Wedding</h3>
+
+                </div>
+
+                <p>
+                    บริการ Photobooth สำหรับงานแต่ง งานอีเวนต์ และงานปาร์ตี้
+                    สร้างความทรงจำที่พิเศษให้กับทุกช่วงเวลา
+                </p>
+
+                <p>📞 080-081-9933</p>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <div class="footer-menu">
+
+                <h4>เมนู</h4>
+
+                <a href="#home">หน้าแรก</a>
+
+                <a href="#">บริการ</a>
+
+                <a href="#">ผลงาน</a>
+
+                <a href="#">ติดต่อ</a>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-social">
+
+                <h4>ติดตามเรา</h4>
+
+                <a href="https://facebook.com/kokophotobooth" target="_blank">Facebook</a>
+
+                <a href="https://line.me/R/ti/p/@024ppzhh" target="_blank">LINE</a>
+
+                <a href="https://instagram.com/photobooth.koko" class="contact-link" data-lang="instagram_btn">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Photobooth Koko Wedding</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script>
+
+        function goPackage(pkg) {
+
+            window.location.href =
+                "booking.html?package=" + encodeURIComponent(pkg);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
